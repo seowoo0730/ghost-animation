@@ -9,6 +9,26 @@ body {
   background: radial-gradient(ellipse at bottom, #15162e 20%, #000 100%);
 }
 
+.ghost {
+  animation: moveUpDown 3s infinite;
+  animation-delay: 2s;
+}
+
+@keyframes moveUpDown {
+  0% {
+    margin-top: 0;
+  }
+  45% {
+    margin-top: -10%;
+  }
+  80% {
+    margin-top: 3%;
+  }
+  100% {
+    margin-top: 0;
+  }
+}
+
 .ghost .body {
   width: 14vw;
   height: 20vw;
@@ -26,7 +46,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  margin-top: 20%;
+  margin-top: 30%;
 }
 
 .ghost .face .eyes {
@@ -54,4 +74,20 @@ body {
   border-bottom-left-radius: 60%;
   border-bottom-right-radius: 60%;
   flex-grow: 1;
+}
+
+.ghost .bottom {
+  display: flex;
+}
+
+.bottom .leg {
+  width: 2vw;
+  height: 1.5vw;
+  background: #fff;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+.bottom .leg:nth-of-type(2n) {
+  position: relative;
+  top: -15px;
 }
