@@ -12,6 +12,7 @@ body {
 .ghost {
   animation: moveUpDown 3s infinite;
   animation-delay: 2s;
+  position: absolute;
 }
 
 @keyframes moveUpDown {
